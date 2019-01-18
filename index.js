@@ -6,7 +6,7 @@ const app = express()
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "hbs")
-app.use(methodOverride(_method))
+//app.use(methodOverride(_method))
 
 
 app.use(require('./routes/index'))

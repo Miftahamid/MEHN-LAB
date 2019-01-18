@@ -1,7 +1,8 @@
-// controllers/todo.js
+// controllers recipe 
 module.exports = {
 	index: function (req, res) {
 		// listing all to dos
+		res.render()
 	},
 	new: function (req, res) {
 		// rending the form to create a new to do
