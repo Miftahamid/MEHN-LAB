@@ -2,7 +2,7 @@
 
  const router = express.Router()
 
-router.use('/',require('./application'))
+//router.use('/',require('./application'))
 
 
  router.all('*',(res,req) => {
