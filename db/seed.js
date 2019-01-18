@@ -1,17 +1,7 @@
-// const User = require("../models/User");
-// const { Recipe } = require("../models/Recipe");
-
-// User.find({}).remove(() => {
-//   Recipe.find({}).remove(() => {
-//   });
-// });
-
-// User.create({})
-
-
+ 
 const User = require("../models/User");
-const Recipe = require("../models/recipe");
-const bcrypt = require("bcrypt-nodejs");
+const Recipe = require("../models/Recipe");
+// const bcrypt = require("bcrypt-nodejs");
 //this is for the passport 
 const createPassword = password =>
   bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
@@ -23,7 +13,7 @@ User.find({}).remove(() => {
       password: createPassword("bugsbunny")
     }).then(user => {
       Promise.all([
-        Tweet.create({
+        Recipe.create({
           content: "eh, what's up doc?",
           author: user._id
         }).then(recipe => {
