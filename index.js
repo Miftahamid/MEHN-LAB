@@ -1,11 +1,24 @@
-const express = require("express")
-const hbs = require("hbs")
-const bodyParser = require("body-perser")
-const methodOverride = require("method-override")
-
+const express = require('express')
+// Create a new instance of express 
 const app = express()
-hbs.registerPartials(__dirname + "/views/partials")
-app.use(express.static("public"))
+// Creating an instance of mongoose 
 
+//Schema is connected to the mongoose 
+const Schema = mongoose.Schema
 
-app.listen(4000, () => {console.log("app listening on port 4000")})
+const listSchema = new Schema({
+    name : String,
+    items : 
+})
+const listModel = mongoose.model("List", listSchema)
+//Insted of puting this here we put it in a folder called fouter 
+app.get('/home', (res,req) => {
+    listModel.find({}).then((results) => {
+        console.log(results)
+    })
+    res.send('hello form /home')
+})
+
+app.listen(3000, () =>{
+    console.log("I am listining")
+})
