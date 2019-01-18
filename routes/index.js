@@ -1,12 +1,15 @@
- const express = require ('express')
+// routers for the recipe 
+// When the user client goes to the the routes it will preform the action 
+const express = require('express')
+const router = express.Router()
+const recipeController = require('../controllers/Recipe')
 
- const router = express.Router()
+router.get('/',recipeController.index)
+router.get('/new', recipeController.new)
+router.post('/', recipeController.create)
+router.get('/:id', recipeController.show)
+router.get('/:id/edit', recipeController.edit)
+router.put('/:id', recipeController.update)
+router.destroy('/:id', recipeController.destroy)
 
-//router.use('/',require('./application'))
-
-
- router.all('*',(res,req) => {
-     res.status(400).send()
- })
-
- module.exports = router
+module.exports = router
