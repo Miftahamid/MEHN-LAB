@@ -10,7 +10,7 @@
 
 
 const User = require("../models/User");
-const Recipe = require("../models/Recipe");
+const Recipe = require("../models/recipe");
 const bcrypt = require("bcrypt-nodejs");
 //this is for the passport 
 const createPassword = password =>
