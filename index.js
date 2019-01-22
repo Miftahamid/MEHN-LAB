@@ -1,14 +1,18 @@
 const express = require('express')
-<<<<<<< HEAD
-// const hbs = require("hbs")
-const app = express()
-=======
- 
+ const hbs = require("hbs");
+ const bodyParser = require("body-parser");
 const app = express()
 
 app.use(require('./routes/index'))
 
->>>>>>> b4f4ae84655c522b4ad5b3ad124cf1ff43e52c89
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "hbs");
+app.use(methodOverride("_method"));
+
+
+
+
 
 app.use(require('./routes/index'))
 app.listen(3000, () =>{
