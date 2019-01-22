@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    {{{body}}}
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <style>
+      .site-header{
+          background-color: aquamarine;
+          width: 0px;
+      }
+      .nav-wrapper{
+          background-color:black;
+          width: 600px;
+          margin-left: 275px;
+          margin-top: 45px;
+      }
+      img{
+          width: 100px;
+          height: 100px;
+          border: 1px solid greenyellow;
+          border-radius: 25px;
+      }
+      body{
+          background-color: lightslategray;
+      }
+  </style>
+  <body>
+    <header class="site-header">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo left"><img src="https://www.sandiegoprosthodontics.com/files/2018/09/Recipes-Banner.jpg" alt="">Recipes</a>
+          <ul class="right">
+            <li><a href="/recipe/new">AddRecipes</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      {{{ body }}}
+    </main>
+  </body>
 </html>

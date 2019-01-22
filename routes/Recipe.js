@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const tweetController = require("../controllers/tweet");
+const recipeController = require("../controllers/recipe");
 
-router.post("/", tweetController.create);
-router.get("/new", tweetController.new);
-router.get("/:id", tweetController.show);
-router.put("/:id", tweetController.update);
+router.post("/", recipeController.create);
+router.get("/new", recipeController.new);
+router.get("/:id", recipeController.show);
+router.put("/:id", recipeController.update);
 
 module.exports = router;

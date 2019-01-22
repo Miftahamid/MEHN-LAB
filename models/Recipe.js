@@ -13,7 +13,7 @@ const Comment = new Schema({
   }
 });
 
-const Tweet = new Schema({
+const Recipe = new Schema({
   content: String,
   createdAt: {
     type: Date,
@@ -27,6 +27,6 @@ const Tweet = new Schema({
 });
 
 module.exports = {
-  Tweet: mongoose.model("Recipe", Recipe),
+  Recipe: mongoose.model("Recipe", Recipe),
   Comment: mongoose.model("Comment", Comment)
 };
