@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const { Recipe } = require("../models/recipe");
+const { Recipe } = require("../models/Recipe");
 
 module.exports = {
   show: (req, res) => {

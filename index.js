@@ -27,7 +27,6 @@ app.set("view engine", "hbs");
 app.use(cookieParser())
 app.use(bodyParser())
 
-app.set('view engine', 'hbs')
 app.use(express.static(__dirname + '/public'))
 
 app.use(session({secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS'}))
@@ -42,7 +41,7 @@ app.use(function(req, res, next) {
   next()
 })
 
-app.use('/', usersController)
+// app.use('/', usersController)
 
 app.use(require("./routes/index.js"));
 

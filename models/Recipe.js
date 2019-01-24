@@ -23,6 +23,6 @@ const recipe = new Schema({
  
 
 module.exports = {
-  recipe: mongoose.model("recipe", recipe),
+  Recipe: mongoose.model("Recipe", recipe),
   // Comment: mongoose.model("Comment", Comment)
 };

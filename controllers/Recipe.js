@@ -1,4 +1,4 @@
-const { Recipe, Comment } = require("../models/recipe");
+const { Recipe, Comment } = require("../models/Recipe");
 const User = require("../models/User");
 
 module.exports = {

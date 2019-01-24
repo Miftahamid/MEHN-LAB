@@ -9,4 +9,4 @@ router.use('/', require('./application.js'));
 router.use('/user', require('./user'));
 router.use('/recipe', require('./recipe'));
 
-module.exports = router
+module.exports = router;
