@@ -1,0 +1,27 @@
+<!-- {{#if recipes}}
+  <ul class="recipes">
+    {{#each recipes}}
+       {{> 'recipe'}}
+    {{/each}}
+  </ul>
+{{/if}} -->
+
+
+{{#if  recipes}}
+  <ul class="recipes">
+    {{#each recipes}}
+      <div class="card">
+        <div class="card-content">
+          <a class="card-title" href="/recipe/{{id}}">
+            {{ content }}
+          </a>
+        </div>
+        <div class="card-action">
+          <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+          <span class="recipe__date">{{ createdAt }}</span>
+          <span class="recipe_comments">{{ comments.length }} Comments</span>
+        </div>
+      </div>
+    {{/each}}
+  </ul>
+{{/if}}

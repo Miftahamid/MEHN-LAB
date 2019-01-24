@@ -1,10 +1,19 @@
 const mongoose = require("../db/connection");
-var bcrypt   = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-  ingredient: String,
-  souce: String
+const userSchema  = new Schema({
+  content: String,
+  ingrdients: String,
+  recipes:[
+    {
+     type: Schema.Types.ObjectId,
+     ref: "Recipe"
+    }
+   ],
+  createdAt: {
+    type: Date,
+    default: Date.now()
+  }
 });
 
  

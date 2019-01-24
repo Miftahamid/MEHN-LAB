@@ -3,14 +3,24 @@ const { Recipe } = require("../models/Recipe");
 
 module.exports = {
   show: (req, res) => {
-    console.log('user show')
-    res.render('index', { page: "show" })
+    User.findOne({ _id: req.params.id })
+      .populate({
+        path: "recipes",
+        options: { limit: 5, sort: { createdAt: -1 } }
+      })
+      .then(user => {
+        res.render("user/show", { user });
+      });
   },
   new: (req, res) => {
-    res.render("index");
+    res.render("user/new");
   },
   create: (req, res) => {
-    console.log('user create')
-    res.render('index', { page: "create" })
+    User.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(user => {
+      res.redirect(`/user/${user._id}`);
+    });
   }
 };
