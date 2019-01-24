@@ -1,15 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const applicationController = require('../controllers/application.js');
-// var mongo = require('mongodb').MongoClient;
-// var objectId = require('mongodb').ObjectID;
-// var assert = require('assert');
-
-
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index');
-// });
 router.get('/', applicationController.index);
 
 
