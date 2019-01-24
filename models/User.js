@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const userSchema  = new Schema({
   content: String,
-  ingrdients: String,
+  ingredients: String,
   recipes:[
     {
      type: Schema.Types.ObjectId,
