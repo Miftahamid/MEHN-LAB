@@ -17,6 +17,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "hbs": "^4.0.1",
+    "method-override": "^3.0.0",
     "mongo": "^0.1.0",
     "mongoose": "^5.4.6",
     "nodemon": "^1.18.9",

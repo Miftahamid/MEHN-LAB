@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 //const session = require('express-session')
 //const passport = require('passport')
 const usersController = require('./controllers/user.js')
-//const methodOverride = require("method-override");
+const methodOverride = require("method-override");
 const app = express();
 
 hbs.registerPartials(__dirname + "/views/partials");
