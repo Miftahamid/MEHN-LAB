@@ -12,7 +12,7 @@ const bcrypt = require("bcrypt-nodejs");
 const createPassword = password =>
   bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 
-User.find({}).remove(() => {
+{/* User.find({}).remove(() => {
   Recipe.find({}).remove(() => {
     let bugs = User.create({
       email: "bugsbunny@gmail.com",
@@ -72,7 +72,7 @@ User.find({}).remove(() => {
         }),
 
         Recipe.create({
-          content: "Kiww da wabbit!",
+          content: "egg!",
           author: user._id
         }).then(recipe => {
           user.recipes.push(recipe);
@@ -82,5 +82,29 @@ User.find({}).remove(() => {
       });
     });
   });
-});
+}); */}
+User.find({}).remove(() => {
+  Recipe.find({}).remove(() => {
+    let bugs = User.create({
+      email: "bugsbunny@gmail.com",
+      password: createPassword("bugsbunny")
+    }).then(user => {
+      Promise.all([
+        Recipe.create({
+          content: "eh, what's up doc?",
+          author: user._id
+        }).then(recipe => {
+          user.recipes.push(recipe);
+        }),
+        Recipe.create({
+          content: "That's all, folks!",
+          author: user._id,
+
+        }).then(recipe => {
+          user.recips.push(recipe);
+        })
+      ]).then(() => {
+        user.save(err => console.log(err));
+      });
+    });
 </section>
