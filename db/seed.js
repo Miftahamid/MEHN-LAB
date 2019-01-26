@@ -1,10 +1,3 @@
-// const User = require("../models/User");
-// const Recipe = require("../models/Recipe");
-// const bcrypt = require("bcrypt-nodejs");
-// const createPassword = password =>
-// //this is for the passport 
-// bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
- 
 const User = require("../models/User");
 const { Recipe } = require("../models/Recipe");
 const bcrypt = require("bcrypt-nodejs");
@@ -66,7 +59,8 @@ const createPassword = password =>
         Recipe.create({
           content:
             "Shh. Be vewy vewy quiet. I'm hunting wabbits! Huh-huh-huh-huh!",
-          author: user._id
+          author: user._id,
+
         }).then(recipe => {
           user.recipes.push(recipe);
         }),
@@ -81,6 +75,7 @@ const createPassword = password =>
         user.save(err => console.log(err));
       });
     });
+<<<<<<< HEAD
   });
 }); */}
 User.find({}).remove(() => {
@@ -108,3 +103,9 @@ User.find({}).remove(() => {
       });
     });
 </section>
+=======
+  })};
+});
+</section>
+ 
+>>>>>>> a53df01cfb0598f459557f87398d5a1897de14af
